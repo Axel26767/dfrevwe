@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaroMoto Tech </title>
+    <link rel="shortcut icon" href="Doc1 - Word 23_09_2023 01_54_26 p. m..png" type="image/x-icon">
+    <link rel="stylesheet" href="cartyle.css">
+    <link rel="stylesheet" href="cars.js">
+</head>
+<body>
+    <div class="vr"><img src="./low-poly-grid-haikei.png" alt=""></div>
+    
+    <main class="ero">
+        
+        
+        <form action="cars.php" method="post" enctype="multipart/form-data">
+            <div class="hijo"><img src="../imagenes/A light blue porsche with a girl in a red vest sit.jpg" alt=""></div>
+                
+            
+            <h3>Rellena el formulario</h3>
+    
+            <label for="texto">Nombre</label>
+            <input type="text" placeholder="username" id="texto" maxlength="28" pattern="[A-Za-z]+" title="Por favor, ingresa solo letras" oninput="validarTexto(this)">
+            <script>
+                function validarTexto(input) {
+                    // Eliminar caracteres no alfabéticos
+                    input.value = input.value.replace(/[^A-Za-z]/g, '');
+            
+                    // Limitar la longitud a 28 caracteres
+                    if (input.value.length > 28) {
+                        input.value = input.value.slice(0, 28);
+                    }
+                }
+            </script>
+          
+
+            <label for="username">E-mail</label>
+            <input type="text" placeholder="Email  " id="username">
+
+            <label for="username">Pais</label>
+            <select name="pais" id="pais">
+                <option value="">Mexico</option>
+                <option value="">Estados Unidos</option>
+                <option value="">Brasil</option>
+                <option value="">Canada</option>
+                <option value="">u otro</option>
+            </select>
+
+            <label for="username">Edad</label>
+            <input type="number"  oninput="limitarLongitud(this,2)">
+            <script>
+                function limitarLongitud(elemento, maximoCaracteres) {
+                    if (elemento.value.length > maximoCaracteres) {
+                        elemento.value = elemento.value.slice(0, maximoCaracteres);
+                    }
+                }
+            </script>
+
+            <label for="username">Identificacion:</label>
+            <input type="file" id="imagen" name="imagen" >
+            
+
+            <label for="numero">Numero</label>
+            <input type="tel" id="numero" maxlength="9" pattern="[0-9]{9}" title="Por favor, ingresa 9 números" oninput="validarNumero(this)">
+            <script>
+    function validarNumero(input) {
+        // Eliminar caracteres no numéricos
+        input.value = input.value.replace(/\D/g, '');
+
+        // Limitar la longitud a 9 caracteres
+        if (input.value.length > 9) {
+            input.value = input.value.slice(0, 9);
+        }
+    }
+</script>
+
+
+            
+    
+            
+            <input type="button" value="Enviar" id="boton">
+        </form>
+        
+    </main>
+    <script src="./cars.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

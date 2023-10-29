@@ -1,0 +1,378 @@
+*{
+    margin: 0 ;
+    padding: 0;
+    
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(circle, rgb(10 60 202) 0%, #042e52 100%);
+}
+nav{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: auto;
+    background: #333;
+    
+    position: fixed;
+    top: 5px;
+    left: 20%;
+    
+    font-size: 20px;
+    margin-top:  10px;
+    z-index: 2;
+    font-family: fantasy;
+    
+}
+
+.datanews{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    z-index: 2;
+    min-width: 300px;
+}
+
+.log{
+    height: 60px;
+    width: 90px;
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    
+}
+.datanews > li > a{
+    display: block;
+    padding: 15px 20px;
+    border-radius: 3px;
+    color: white;
+    text-decoration: none;
+    z-index: 2;
+}
+
+.datanews > li:hover{
+    background-color: red;
+    transition: 0.5s;
+    z-index: 2;
+}
+.datnews-toggle{
+    
+    color: white;
+    background:none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    
+    display: none;
+}
+
+
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 2;
+}
+.datanews li:hover .menu-vertical{
+    display: block;
+    z-index: 2;
+}
+
+.menu-vertical li:hover{
+    background-color: black;
+    z-index: 2;
+}
+.menu-vertical li a{
+    display: block;
+    color:  white;
+    padding: 15px 15px 15px 20px;
+    text-decoration: none;
+    z-index: 2;
+}
+@media (max-width:768px){
+    .datanews .logo img{
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+        
+    }
+    
+    .datanews{
+        flex-direction: column;
+        align-items: center;
+        margin: 0%;
+        background-color: rgb(58, 49, 49);
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    }
+    .datanews > li:hover{
+        background: none;
+        color: black;
+    }
+    .datnews-toggle{
+        display: block;
+        
+    }
+    .datanews_visible{
+        left: 0;
+    }
+}
+.slider-box{
+    width: 1280px;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+.slider-box ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+.slider-box li {
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+.texto{
+    position: absolute;
+    text-align: center;
+    padding: 0 250px;
+    top: 250px;  
+    color: #ffffff;
+    font-size: 80px;
+}
+.slider-box img{
+    width: 100%;
+    image-rendering: pixelated;
+    
+}
+@keyframes slide{
+    0%{ margin-left: 0; }
+    20%{ margin-left: 0; }
+
+    25%{ margin-left: -100%; }
+    45%{ margin-left: -100%; }
+
+    50%{ margin-left: -200%; }
+    70%{ margin-left: -200%; }
+
+    75%{ margin-left: -300%; }
+    100%{ margin-left: -300%; }
+}
+@media(max-width:991px){
+    body{
+        padding: 30px;
+    }
+
+    .slider-box{
+        width: 100%;
+    }
+
+    .texto{
+        top: 50px;
+        padding: 0;
+        font-size: 40px;
+    }
+}
+
+h2{
+    font-size: 40px;
+    color: beige;
+    margin-top: 5%;
+    text-align: center;
+    font-family: fantasy;
+}
+@media(max-width:991px){
+    h2{
+        margin-top: 15%;
+    }
+}
+
+.xf {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.container{
+    display: flex;
+    width: 25%;
+    max-width: 100%;
+    min-width: 300px;
+    height: 80%;
+    background-color: darkgray;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    box-sizing: border-box;
+    padding: 10px;
+    flex-direction: column;
+    object-fit: cover;
+}
+.hijo img{
+    max-width: 100%;
+    width: 300px;
+    height: 200px;
+    margin-bottom: 5px;
+    object-fit: cover;
+}
+.hijo2{
+    position: relative;
+    text-align: center;
+    top: 5px;
+    font-size: 30px;
+    font-family: fantasy;
+}
+.hijo3{
+    position: relative;
+    top: 50px;
+    font-size: 15px;
+    font-family: fantasy;
+}
+.hijo4,.costo,.comprar{
+    width: 100%; /* Asegura que los elementos ocupen todo el ancho disponible */
+    padding: 10px; /* Añade espacio interno */
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+}
+.hijo4{
+    font-size: 25px;
+    font-family: fantasy;
+}
+
+.costo{
+    font-size: 30px;
+    color: rgb(214, 34, 70);
+    position: relative;
+}
+.comprar{
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    background-color: darkblue;
+    border:solid 3px #FFF200;
+    text-decoration: none;
+    color: white;
+    transition: all .3s;
+    font-family: fantasy;
+}
+.comprar:hover{
+    transform: scale(1.1);
+}
+
+.hijo4 {
+    margin-top: 120px; /* Puedes ajustar el valor negativo según tu preferencia */
+}
+
+.costo {
+    margin-top: -10px; /* Puedes ajustar el valor negativo según tu preferencia */
+}
+
+.comprar {
+    margin-top: -10px; /* Puedes ajustar el valor negativo según tu preferencia */
+}
+.container,.hijo img,.hijo2,.hijo3,.hijo4,.costo,.comprar{
+    flex-wrap: wrap-reverse;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background-color: #ffff00;
+    color: black;
+    border-radius: 30px;
+    width: 200px;
+    font-size: 1.8rem;
+    transition: 150ms;
+    border: solid 5px red;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.xd{
+    
+    height: 50px;
+    
+    margin-top: 5%;
+    top: 0;
+    background-color:  blue;
+    
+    border: solid 5px  red;
+}
+
+.xd p{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+    font-family: fantasy;
+}
+@media (max-width:768px){
+    .xd p {
+        font-size: 35px;
+        font-family: fantasy;
+    }
+}
+.xn{
+    
+    height: 50px;
+    
+    margin-top: 5%;
+    top: 0;
+    background-color:  blue;
+    
+    border: solid 5px  red;
+}
+
+.xn p{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+@media (max-width:768px){
+    .xn p {
+        font-size: 35px;
+        font-family: fantasy;
+    }
+}
+
+
+.bg{
+    display: flex;
+    justify-content: center;
+    color: white;
+    background:none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    scroll-behavior: smooth;
+    font-family: fantasy;
+}
+
+
